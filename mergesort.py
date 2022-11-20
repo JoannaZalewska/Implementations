@@ -22,7 +22,11 @@ def merge(left, right):
             right_index += 1
 
 def mergesort(list_to_sort):
+    if list_to_sort is None:
+        return "Nothing to sort"
     list_length = len(list_to_sort)
+    if list_length == 0:
+        return "Nothing to sort"
     if list_length == 1:
         return list_to_sort
     mid_index = list_length//2
@@ -36,5 +40,5 @@ def mergesort(list_to_sort):
 
 if __name__ == '__main__':
 
-    list_to_sort = [1, 4, 2, 6, 3, 12, 9, 4]
+    list_to_sort = [9,2,5,7,10,3,12]
     print(mergesort(list_to_sort))
